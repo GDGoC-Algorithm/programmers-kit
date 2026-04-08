@@ -19,7 +19,7 @@ void order_cal(int time, int total_choice, vector<vector<int>> &dungeons)
     }
     for (int i = 0; i < dungeons.size(); i++) {
         if (choiced[i] == 0 || caled[i] == 1) continue;
-        if (dungeons[i][0] > life) continue;
+        if (dungeons[i][0] > life) return;
         caled[i] = 1;
         life -= dungeons[i][1];
         order_cal(time+1, total_choice, dungeons);
